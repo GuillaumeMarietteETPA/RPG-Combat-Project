@@ -26,6 +26,8 @@ int pmm = 30;
 int dgtpoison = 15;
 int pyes = 0;
 int pmyes = 0;
+int xp = 0;
+
 
 	printf("Un sanglier pas tres gentil vous barre la route !\n");
 	
@@ -105,8 +107,6 @@ int pmyes = 0;
 
 						}
 
-
-					
 
 								
 				
@@ -554,6 +554,7 @@ int pmyes = 0;
 }
 		while ((pvmonstre > 0) && (pvjoueur > 0));
 		
+
 	
 
 
@@ -561,3 +562,4 @@ int pmyes = 0;
 	return 0;
 
 }
+
