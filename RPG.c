@@ -10,6 +10,17 @@ int main (void) {
 
 	}
 
+	struct Monstre{
+		int type;
+		float pv;
+		float pm;
+		int atk;
+
+	}
+
+
+
+
 	struct Perso soigneuse {
 		soigneuse.type = 1;
 		soigneuse.pv = 100;
@@ -39,6 +50,26 @@ int main (void) {
 	}
 
 
+	struct Monstre araignee {
+		araignee.type = 2;
+		araignee.pv = 60;
+		araignee.pm = 50;
+		araignee.atk = 30;
+	}
+
+	struct Monstre troll {
+		araignee.type = 2;
+		araignee.pv = 250;
+		araignee.pm = 50;
+		araignee.atk = 60;
+	}
+
+	struct Monstre loup {
+		araignee.type = 2;
+		araignee.pv = 70;
+		araignee.pm = 30;
+		araignee.atk = 40;
+	}
 
 
 
