@@ -38,6 +38,7 @@ int xp = 0;
 
 			printf("Point de vie = %d \n", pvjoueur);
 			printf("Point de mana = %d \n", pmj);
+			printf("Points d'expériences = %d \n", xp);
 			printf("-----------------------\n");
 			printf("Que faite vous ?\n");
 			printf("Attaque[1] - Defense[2] - Poison[3] - Antidote[4]\n");
@@ -100,6 +101,8 @@ int xp = 0;
 						}
 						else  {
 					printf("Il lui reste 0 PV, le vilain sanglier est vaincu !\n");
+					xp = xp + 15;
+					printf("Vous remportez %d xp\n", xp);
 					break;
 				}		
 					
@@ -123,6 +126,8 @@ int xp = 0;
 
 				if (pvmonstre <= 0)  {
 					printf("Il lui reste 0 PV, le vilain sanglier est vaincu !\n");
+					xp = xp + 15;
+					printf("Vous remportez %d xp\n", xp);
 					break;
 				}		
 
@@ -152,6 +157,8 @@ int xp = 0;
 								if (pvmonstre <= 0)  {
 					printf("Le  sanglier subit les degats du poison et perd %d PV\n", dgtpoison);
 					printf("Il lui reste 0 PV, le vilain sanglier est vaincu !\n");
+					xp = xp + 15;
+					printf("Vous remportez %d xp\n", xp);
 					break;
 				}	
 
@@ -215,6 +222,8 @@ int xp = 0;
 						if (pvmonstre <= 0)  {
 					printf("Le  sanglier subit les degats du poison et perd %d PV\n", dgtpoison);
 					printf("Il lui reste 0 PV, le vilain sanglier est vaincu !\n");
+					xp = xp + 15;
+					printf("Vous remportez %d xp\n", xp);
 					break;
 				}	
 
@@ -238,7 +247,9 @@ int xp = 0;
 
 						if (pvmonstre <= 0)  {
 					printf("Le  sanglier subit les degats du poison et perd %d PV\n", dgtpoison);
-					printf("Il lui reste 0 PV, le vilain sanglier est vaincu !\n");					
+					printf("Il lui reste 0 PV, le vilain sanglier est vaincu !\n");
+					xp = xp + 15;
+					printf("Vous remportez %d xp\n", xp);					
 					break;
 				}		
 
@@ -268,6 +279,8 @@ int xp = 0;
 								if (pvmonstre <= 0)  {
 					printf("Le  sanglier subit les degats du poison et perd %d PV\n", dgtpoison);
 					printf("Il lui reste 0 PV, le vilain sanglier est vaincu !\n");
+					xp = xp + 15;
+					printf("Vous remportez %d xp\n", xp);
 					break;
 				}		
 			
@@ -349,6 +362,8 @@ int xp = 0;
 								if (pvmonstre <= 0)  {
 					printf("Le  sanglier subit les degats du poison et perd %d PV\n", dgtpoison);
 					printf("Il lui reste 0 PV, le vilain sanglier est vaincu !\n");
+					xp = xp + 15;
+					printf("Vous remportez %d xp\n", xp);
 					break;
 				}		
 
@@ -370,6 +385,8 @@ int xp = 0;
 						if (pvmonstre <= 0)  {
 						printf("Le  sanglier subit les degats du poison et perd %d PV\n", dgtpoison);
 						printf("Il lui reste 0 PV, le vilain sanglier est vaincu !\n");
+						xp = xp + 15;
+						printf("Vous remportez %d xp\n", xp);
 						break;
 						}			
 
@@ -409,6 +426,8 @@ int xp = 0;
 								if (pvmonstre <= 0)  {
 					printf("Le  sanglier subit les degats du poison et perd %d PV\n", dgtpoison);
 					printf("Il lui reste 0 PV, le vilain sanglier est vaincu !\n");
+					xp = xp + 15;
+					printf("Vous remportez %d xp\n", xp);
 					break;
 				}	
 
@@ -464,6 +483,8 @@ int xp = 0;
 						if (pvmonstre <= 0)  {
 					printf("Le  sanglier subit les degats du poison et perd %d PV\n", dgtpoison);
 					printf("Il lui reste 0 PV, le vilain sanglier est vaincu !\n");
+					xp = xp + 15;
+					printf("Vous remportez %d xp\n", xp);
 					break;
 				}	
 
@@ -484,6 +505,8 @@ int xp = 0;
 						if (pvmonstre <= 0)  {
 						printf("Le  sanglier subit les degats du poison et perd %d PV\n", dgtpoison);
 						printf("Il lui reste 0 PV, le vilain sanglier est vaincu !\n");
+						xp = xp + 15;
+						printf("Vous remportez %d xp\n", xp);
 						break;
 						}			
 
@@ -519,7 +542,9 @@ int xp = 0;
 
 								if (pvmonstre <= 0)  {
 					printf("Le  sanglier subit les degats du poison et perd %d PV\n", dgtpoison);
-					printf("Il lui reste 0 PV, le vilain sanglier est vaincu !\n");			
+					printf("Il lui reste 0 PV, le vilain sanglier est vaincu !\n");		
+					xp = xp + 15;
+					printf("Vous remportez %d xp\n", xp);					
 					break;
 				}	
 
