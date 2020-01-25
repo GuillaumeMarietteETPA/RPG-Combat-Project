@@ -80,9 +80,16 @@ int main (void) {
 		loup.atk = 40;
 	
 
+		int xp = 0;
+
 
 		int choixm = rand_a_b(1,4);
 
+	printf("Point de vie = %f \n", joueur.pv);
+	printf("Point de mana = %f\n", joueur.pm);
+	printf("Points d'experiences = %d \n", xp);
+	printf("-----------------------\n");
+	
 
 
 		if (choixm == 1) {
@@ -94,9 +101,10 @@ int main (void) {
 		if (choixm == 3) {
 	printf("Un loup vous barre la route !\n");
 }
-
-
-
+	
+	printf("-----------------------\n");
+	printf("Que faite vous ?\n");
+	printf("Attaque[1] - Defense[2] - Poison[3] - Antidote[4]\n");
 
 
 
