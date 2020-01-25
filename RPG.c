@@ -78,8 +78,10 @@ int main (void) {
 		loup.pv = 70;
 		loup.pm = 30;
 		loup.atk = 40;
-	
-
+		
+		int def;
+		int defmonstre;
+		int choixj;
 		int xp = 0;
 
 
@@ -106,7 +108,76 @@ int main (void) {
 	printf("Que faite vous ?\n");
 	printf("Attaque[1] - Defense[2] - Poison[3] - Antidote[4]\n");
 
+	scanf("%d", &choixj);
 
+	int cm = 1; //rand_a_b(1,4);
+		
+		if (choixj == 1) {		
+			if (choixm == 1) {
+	printf("Vous attaquer vaillament !\n");
+	araignee.pv = araignee.pv - joueur.atk;
+	printf("Le monstre perd %f PV\n", joueur.atk);
+			}			
+
+			if (choixm == 2) {
+	printf("Vous attaquer vaillament !\n");
+	troll.pv = troll.pv - joueur.atk;
+	printf("Le monstre perd %f PV\n", joueur.atk);
+			}
+			
+			if (choixm == 3) {
+	printf("Vous attaquer vaillament !\n");
+	loup.pv = loup.pv - joueur.atk;
+	printf("Le monstre perd %f PV\n", joueur.atk);
+			}
+		}
+
+		
+
+
+
+
+
+		if (choixj == 2) {
+			if (choixm == 1) {
+	printf("Vous brandisser votre bouclier !\n");
+	def = araignee.atk / 4;
+	joueur.pv = joueur.pv - def;
+	printf("Le monstre attaque et vous perdez %d PV\n", def);
+			}
+
+			if (choixm == 2) {
+	printf("Vous brandisser votre bouclier !\n");
+	def = troll.atk / 4;
+	joueur.pv = joueur.pv - def;
+	printf("Le monstre attaque et vous perdez %d PV\n", def);
+			}
+
+			if (choixm == 3) {
+	printf("Vous brandisser votre bouclier !\n");
+	def = loup.atk / 4;
+	joueur.pv = joueur.pv - def;
+	printf("Le monstre attaque et vous perdez %d PV\n", def);
+			}
+		}
+
+		
+
+
+
+
+
+
+
+		if (choixj == 3) {
+	printf("Vous lancer un sort de poison !\n");
+			
+		}
+
+		if (choixj == 4) {
+	printf("Vous lancer un sort antidote ! \n");
+			
+		}
 
 
 
