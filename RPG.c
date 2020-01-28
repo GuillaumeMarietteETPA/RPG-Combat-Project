@@ -1,16 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-	struct Perso {
+	struct perso {
 		int type;
+		char nom[30];
 		float pv;
 		float pm;
 		int atk;
 
 	};
 
-	struct Monstre {
+	struct monstre {
 		int type;
+		char nom[30];
 		float pv;
 		float pm;
 		int atk;
@@ -32,63 +34,30 @@ int main (void) {
 
 
 
-	struct Perso soigneuse;
-		soigneuse.type = 1;
-		soigneuse.pv = 100;
-		soigneuse.pm = 100;
-		soigneuse.atk = 15;
+		perso Soigneuse = {1, "Soigneuse", 100, 100, 15};
+		perso Joueur = {1, "Joueur", 200, 50, 50};	
+		perso Mage = {1, "Mage", 130, 200, 25};
+		perso Assassin = {1, "Assassin", 80, 100, 25};
 	
+		monstre Araignee = {2, "Araignee", 60, 50, 30};
+		monstre Troll = {2, "Troll", 250, 50, 30};	
+		monstre Loup = {2, "Loup", 70, 30, 40};
 
-	struct Perso joueur;
-		joueur.type = 1;
-		joueur.pv = 200;
-		joueur.pm = 50;
-		joueur.atk = 50;
 	
-	struct Perso mage;
-		mage.type = 1;
-		mage.pv = 130;
-		mage.pm = 200;
-		mage.atk = 25;
-	
-
-	struct Perso assassin;
-		assassin.type = 1;
-		assassin.pv = 80;
-		assassin.pm = 100;
-		assassin.atk = 25;
-	
-
-	struct Monstre araignee;
-		araignee.type = 2;
-		araignee.pv = 60;
-		araignee.pm = 50;
-		araignee.atk = 30;
-	
-
-	struct Monstre troll;
-		troll.type = 2;
-		troll.pv = 250;
-		troll.pm = 50;
-		troll.atk = 60;
-	
-
-	struct Monstre loup;
-		loup.type = 2;
-		loup.pv = 70;
-		loup.pm = 30;
-		loup.atk = 40;
 		
+		typedef struct perso perso;
+		typedef struct monstre monstre;
+
 		int def;
 		int defmonstre;
 		int choixj;
 		int xp = 0;
 
-
+		
 		int choixm = rand_a_b(1,4);
 
-	printf("Point de vie = %f \n", joueur.pv);
-	printf("Point de mana = %f\n", joueur.pm);
+	printf("Point de vie = %s \n", Joueur.pv);
+	printf("Point de mana = %s\n", Joueur.pm);
 	printf("Points d'experiences = %d \n", xp);
 	printf("-----------------------\n");
 	
@@ -115,20 +84,20 @@ int main (void) {
 		if (choixj == 1) {		
 			if (choixm == 1) {
 	printf("Vous attaquer vaillament !\n");
-	araignee.pv = araignee.pv - joueur.atk;
-	printf("Le monstre perd %f PV\n", joueur.atk);
+	Araignee.pv = Araignee.pv - Joueur.atk;
+	printf("Le monstre perd %f PV\n", Joueur.atk);
 			}			
 
 			if (choixm == 2) {
 	printf("Vous attaquer vaillament !\n");
-	troll.pv = troll.pv - joueur.atk;
-	printf("Le monstre perd %f PV\n", joueur.atk);
+	Troll.pv = Troll.pv - Joueur.atk;
+	printf("Le monstre perd %f PV\n", Joueur.atk);
 			}
 			
 			if (choixm == 3) {
 	printf("Vous attaquer vaillament !\n");
-	loup.pv = loup.pv - joueur.atk;
-	printf("Le monstre perd %f PV\n", joueur.atk);
+	Loup.pv = Loup.pv - Joueur.atk;
+	printf("Le monstre perd %f PV\n", Joueur.atk);
 			}
 		}
 
@@ -141,22 +110,22 @@ int main (void) {
 		if (choixj == 2) {
 			if (choixm == 1) {
 	printf("Vous brandisser votre bouclier !\n");
-	def = araignee.atk / 4;
-	joueur.pv = joueur.pv - def;
+	def = Araignee.atk / 4;
+	Joueur.pv = Joueur.pv - def;
 	printf("Le monstre attaque et vous perdez %d PV\n", def);
 			}
 
 			if (choixm == 2) {
 	printf("Vous brandisser votre bouclier !\n");
-	def = troll.atk / 4;
-	joueur.pv = joueur.pv - def;
+	def = Troll.atk / 4;
+	Joueur.pv = Joueur.pv - def;
 	printf("Le monstre attaque et vous perdez %d PV\n", def);
 			}
 
 			if (choixm == 3) {
 	printf("Vous brandisser votre bouclier !\n");
-	def = loup.atk / 4;
-	joueur.pv = joueur.pv - def;
+	def = Loup.atk / 4;
+	Joueur.pv = Joueur.pv - def;
 	printf("Le monstre attaque et vous perdez %d PV\n", def);
 			}
 		}
